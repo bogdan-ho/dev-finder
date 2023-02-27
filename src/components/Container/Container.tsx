@@ -1,11 +1,13 @@
 import React from 'react';
 import styles from './Container.module.scss';
 
-interface ContainerProps { }
+interface ContainerProps {
+  children: React.ReactNode;
+}
 
-const Container = ({ }: ContainerProps) => (
+const Container = ({ children }: ContainerProps) => (
   <div className={styles.container} data-testid="Container">
-    Container Component
+    {children}
   </div>
 );
 
