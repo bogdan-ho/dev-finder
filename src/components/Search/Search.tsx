@@ -17,7 +17,7 @@ const Search = ({ hasError, onSubmit }: SearchProps) => {
 
     if (inputRef.current) {
       const text = inputRef.current.value;
-      onSubmit(text);
+      onSubmit(text.trim());
       inputRef.current.value = '';
     }
   };
