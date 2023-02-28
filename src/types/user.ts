@@ -1,9 +1,9 @@
 export type GithubUser = {
   login: string,
   id: number,
-  avatart_url: string,
+  avatar_url: string,
   name: string,
-  company: string,
+  company: string | null,
   blog: string,
   location: string,
   bio: string,
@@ -24,7 +24,7 @@ export type LocalGithubUser = {
   id: number,
   avatar: string,
   name: string,
-  company: string,
+  company: string | null,
   blog: string,
   location: string,
   bio: string,
@@ -33,4 +33,4 @@ export type LocalGithubUser = {
   followers: number,
   following: number,
   created: string,
-}
+};
