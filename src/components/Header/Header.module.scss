@@ -1,4 +1,3 @@
-// в зависимости от светлой или темной темы создаем свои локальные переменные цвета header gray-300 или white
 :global {
   body[data-theme='light'] {
     --header-color: var(--gray-300);
@@ -8,15 +7,13 @@
     --header-color: var(--white);
   }
 }
-// задаем стили для header margin top/bottom 35px left/right 0 ; flex; space between и по центру
+
 .header {
   margin: 35px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-// задаем стили для лого цвет; размер шрифта 0.75 рем; отступы между строк 1.5; жирное начертание 
 
 .logo {
   color: var(--header-color);
