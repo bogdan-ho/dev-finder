@@ -44,7 +44,7 @@ const UserInfo = ({
             icon={icon}
             text={text}
             isLink={isLink}
-            key={`${text}${isLink}`}
+            key={Math.random()}
           />
         );
       })}
