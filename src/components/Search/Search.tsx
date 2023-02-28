@@ -15,13 +15,10 @@ const Search = ({ hasError, onSubmit }: SearchProps) => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
-    const text = inputRef.current?.value || '';
-
-    if (text) {
+    if (inputRef.current) {
+      const text = inputRef.current.value;
       onSubmit(text);
-      if (inputRef.current) {
-        inputRef.current.value = '';
-      }
+      inputRef.current.value = '';
     }
   };
 
