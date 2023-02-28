@@ -3,11 +3,12 @@ import styles from './UserCard.module.scss';
 import UserStat from '../UserStat/UserStat';
 import { LocalGithubUser } from '../../types';
 import UserTitle from '../UserTitle/UserTitle';
+import UserInfo from '../UserInfo/UserInfo';
 
 type UserCardProps = LocalGithubUser;
 
 const UserCard = ({
-  repos, followers, following, created, login, name, avatar, bio,
+  repos, followers, following, created, login, name, avatar, bio, blog, company, location, twitter,
 }: UserCardProps) => (
   <div className={styles.userCard} data-testid="UserCard">
     <img src={avatar} alt={login} className={styles.avatar} />
@@ -23,6 +24,12 @@ const UserCard = ({
       repos={repos}
       followers={followers}
       following={following}
+    />
+    <UserInfo
+      blog={blog}
+      company={company}
+      location={location}
+      twitter={twitter}
     />
   </div>
 );
